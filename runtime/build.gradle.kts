@@ -37,7 +37,7 @@ android {
 dependencies {
     implementation(kotlin("bom"))
     implementation(kotlin("stdlib"))
-    implementation(project(":core"))
+    implementation("io.johnsonlee.initializr:core")
     implementation("io.johnsonlee:once:1.0.0")
     implementation("androidx.tracing:tracing-ktx:1.0.0")
     implementation("androidx.annotation:annotation:1.0.0")

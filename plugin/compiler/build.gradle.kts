@@ -4,6 +4,12 @@ plugins {
     id("io.johnsonlee.sonatype-publish-plugin")
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
+
+
 val boosterVersion: String by extra
 val codegenVersion: String by extra
 
