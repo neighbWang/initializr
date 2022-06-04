@@ -1,13 +1,14 @@
 plugins {
-    kotlin("jvm")
-    kotlin("kapt")
-    id("io.johnsonlee.sonatype-publish-plugin")
+    id("build-kotlin-library")
 }
 
-val boosterVersion: String by extra
+repositories {
+    mavenCentral()
+    google()
+}
+
+group = "io.johnsonlee.initializr"
 
 dependencies {
-    implementation(kotlin("bom"))
-    implementation(kotlin("stdlib"))
-    compileOnly("com.didiglobal.booster:booster-android-api:${boosterVersion}")
+    compileOnly("com.didiglobal.booster:booster-android-api:4.9.0")
 }

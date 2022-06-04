@@ -1,5 +1,17 @@
 rootProject.name = "initializr"
 
-include(":compiler")
-include(":core")
-include(":runtime")
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        google()
+    }
+
+    includeBuild("buildEnv")
+}
+
+includeBuild("examples")
+includeBuild("core")
+includeBuild("compiler")
+includeBuild("runtime")
+includeBuild("plugin")
